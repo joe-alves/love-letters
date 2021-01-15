@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Love Letter</title>
+</head>
+
+<body>
+    <h1>Your Love Letter:</h1>
+    <form action="" method="post" novalidate>
+        {{ leForm.csrf_token }}
+        {{ leForm.hidden_tag() }}
+        <p>
+            {{ leForm.sender.label }}
+            {{ leForm.sender() }}
+
+            {{ leForm.to.label }}
+            {{ leForm.to() }}
+
+            {{ leForm.body.label }}
+            {{ leForm.body() }}
+        </p>
+        <p>
+            {{ leForm.submit() }}
+            {{ leForm.cancel() }}
+        </p>
+    </form>
+</body>
+</html>
